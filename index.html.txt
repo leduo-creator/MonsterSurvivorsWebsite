@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors - Survive Against Endless Waves of Monsters</title>
+    <meta name="description" content="Play Monster Survivors online for free. Battle endless waves of monsters, level up your character, and discover powerful abilities in this action-packed survival game.">
+    <link rel="canonical" href="https://monstersurvivors.buzz/">
+    <meta name="keywords" content="Monster Survivors, survival game, action game, roguelike, online game, free game">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            indigo: '#5856D6',
+                            purple: '#AF52DE',
+                            pink: '#FF2D55',
+                            red: '#FF3B30',
+                            orange: '#FF9500',
+                            yellow: '#FFCC00',
+                            green: '#34C759',
+                            teal: '#5AC8FA',
+                            gray: '#8E8E93',
+                            darkgray: '#636366',
+                            lightgray: '#F2F2F7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+        
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-gray-800">
+    <header class="bg-gradient-to-r from-apple-blue to-apple-purple text-white shadow-lg">
+        <div class="container mx-auto px-4 py-5">
+            <nav class="flex flex-wrap justify-between items-center">
+                <a href="/" class="text-2xl font-bold flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    MonsterSurvivors.buzz
+                </a>
+                <div class="block lg:hidden">
+                    <button id="mobile-menu-button" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-apple-yellow hover:border-apple-yellow">
+                        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="menu" class="hidden w-full lg:flex lg:items-center lg:w-auto lg:block">
+                    <div class="text-sm lg:flex-grow lg:text-right">
+                        <a href="#game" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-apple-yellow mr-6">
+                            Play Now
+                        </a>
+                        <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-apple-yellow mr-6">
+                            About
+                        </a>
+                        <a href="#features" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-apple-yellow mr-6">
+                            Features
+                        </a>
+                        <a href="#how-to-play" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-apple-yellow">
+                            How to Play
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-apple-blue to-apple-purple">Monster Survivors</h1>
+            <p class="text-xl md:text-2xl text-apple-darkgray max-w-3xl mx-auto">
+                Battle endless waves of monsters, upgrade your abilities, and see how long you can survive in this action-packed adventure!
+            </p>
+            <div class="mt-8">
+                <a href="#game" class="bg-apple-blue hover:bg-apple-indigo text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                    Play Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game" class="mb-16">
+            <div class="game-container shadow-2xl rounded-lg overflow-hidden border-4 border-apple-blue">
+                <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-apple-indigo border-b-2 border-apple-indigo pb-2">About Monster Survivors</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-4 text-lg">
+                    Monster Survivors is an adrenaline-pumping survival action game where you face relentless waves of monsters in a battle for survival. As time progresses, the challenge intensifies with stronger enemies and more chaotic encounters.
+                </p>
+                <p class="mb-4 text-lg">
+                    Your objective is simple yet challenging: survive as long as possible. Defeat monsters to gain experience points, level up, and select from a variety of powerful abilities and weapons to enhance your character's combat capabilities.
+                </p>
+                <p class="text-lg">
+                    With roguelike elements and procedurally generated encounters, Monster Survivors offers a unique experience with each playthrough. Test your reflexes, strategic thinking, and adaptability as you face the ever-growing monster hordes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-apple-purple border-b-2 border-apple-purple pb-2">Game Features</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-orange mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-apple-orange">Endless Action</h3>
+                    <p>Face wave after wave of increasingly difficult monsters with an endless gameplay loop that tests your survival skills.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-green mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-apple-green">Character Progression</h3>
+                    <p>Level up and choose from various upgrades to enhance your abilities, creating a unique build with each playthrough.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-red mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-apple-red">Diverse Enemies</h3>
+                    <p>Battle against a wide variety of monsters, each with unique behaviors, abilities, and attack patterns.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-blue mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-apple-blue">Dynamic Weapons</h3>
+                    <p>Access a variety of weapons and attack styles that can be enhanced and evolved throughout your journey.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-purple mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-apple-purple">Customizable Difficulty</h3>
+                    <p>Choose your preferred challenge level and adapt your strategies based on the increasing difficulty as you progress.</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-apple-yellow mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="
